@@ -1,10 +1,11 @@
 
 
 set(ORUMCEK_SOURCES
-        main.cpp
-)
+        main.cpp)
+find_package(Boost 1.65.1 COMPONENTS system filesystem )
 
-
-add_executable(orumcek ${ORUMCEK_SOURCES})
-
-install(TARGETS orumcek DESTINATION ${SBINDIR})
+include_directories(${Boost_INCLUDE_DIRS})
+link_directories(${Boost_LIBRARY_DIR})
+add_executable(Orumcek ${ORUMCEK_SOURCES})
+target_link_libraries(Orumcek ${Boost_LIBRARIES})
+install(TARGETS Orumcek DESTINATION ${SBINDIR})

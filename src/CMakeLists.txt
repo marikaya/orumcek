@@ -1,4 +1,5 @@
 include_directories(${CMAKE_BINARY_DIR} ${CMAKE_SOURCE_DIR}/src)
+#subdirs(common)
 
 link_directories(
         ${CMAKE_BINARY_DIR}/src/common
