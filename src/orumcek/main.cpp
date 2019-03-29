@@ -34,7 +34,7 @@ public:
 
     void start()
     {
-        message_ = "Benim Adım Fevzi Ya Sen ?";
+        message_ = "I am who i am";
 
         boost::asio::async_write(socket_, boost::asio::buffer(message_),
                                  boost::bind(&tcp_connection::handle_write, shared_from_this(),
